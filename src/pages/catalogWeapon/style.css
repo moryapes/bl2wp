@@ -1,0 +1,183 @@
+.catalog_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalog_top a {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+.catalog_top a:hover {
+    color: var(--description);
+}
+
+.catalog__category {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.manufacturer {
+    width: 90%;
+}
+
+/* карточка */
+.category__card {
+    height: 135px;
+    width: 134px;
+    background-color: var(--black);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s;
+}
+.category__card:hover {
+    border: 2px solid var(--accent);
+}
+
+/* цвета */
+.rare-c {
+    background-color: var(--rare);
+    color: var(--dark);
+}
+
+.e_tech-c {
+    background-color: var(--e-tech);
+    color: var(--dark);
+}
+
+.very_rare-c {
+    background-color: var(--violet);
+    color: var(--dark);
+}
+
+.legendary-c {
+    background-color: var(--legendary);
+    color: var(--dark);
+}
+
+.seraphim-c {
+    background-color: var(--seraphim);
+    color: var(--dark);
+}
+
+.perlamutr-c {
+    background-color: var(--perlamutr);
+    color: var(--dark);
+}
+
+.rainbow-c {
+    background: var(--rainbow);
+    color: var(--dark);
+}
+
+@media screen and (max-width: 1080px) {
+    .category__card {
+        max-height: 12vw;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .category__card {
+       padding: 8px;
+       max-height: 13vw;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .category__card {
+       max-height: 15vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .category__card {
+       max-height: 15vw;
+       font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .category__card {
+       max-width: 18vw;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .category__card {
+       max-width: 16vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .category__card {
+       max-width: 24vw;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .category__card {
+       max-width: 23vw;
+       max-height: 18vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .category__card {
+       max-width: 22vw;
+       max-height: 22vw;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .category__card {
+       max-width: 23vw;
+       max-height: 24vw;
+    }
+
+    .catalog__category {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .category__card {
+       max-width: 34vw;
+       max-height: 24vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .category__card {
+       max-width: 33vw;
+       max-height: 30vw;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .catalog_top a {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}

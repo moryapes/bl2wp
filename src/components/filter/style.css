@@ -1,0 +1,224 @@
+.catalog__filter {
+  background-color: var(--black);
+  border: 2px var(--dark) solid;
+  border-left: 0px;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  left: 0;
+  min-width: 120px;
+}
+
+.catalog__filter p {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.catalog__filter__open {
+  width: 22.9vw;
+  transform: translateX(0);
+  transition: transform 0.2s;
+  padding: 1vw;
+  padding-top: 0;
+}
+
+.catalog__filter__but {
+  padding: 16px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+h4 {
+  color: var(--white);
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.rarity-box {
+  width: 2.4vw;
+  height: 2.4vw;
+  min-width: 40px;
+  min-height: 40px;
+  cursor: pointer;
+  border: 2px solid var(--dark);
+  border-radius: 0.31vw;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  transition: border 0.2s;
+}
+
+.rarity-box:hover {
+  border: 2px solid var(--white);
+}
+
+.filter__element-img {
+  margin-right: 8px;
+  /* filter: grayscale(0.95);
+  transition: filter 0.3s; */
+  opacity: 32%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.filter__element-img:hover {
+  /* filter: none; */
+  opacity: 100%;
+}
+
+.filter__type {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__type:last-child {
+  justify-content: left;
+}
+
+.filter__type-but {
+  background-color: transparent;
+  border: 2px solid var(--dark);
+  border-radius: 4px;
+  padding: 2px 16px;
+  margin-bottom: 4px;
+  color: var(--white);
+  font-size: 14px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.filter__type-but:hover,
+.filter__type-but:active {
+  background-color: var(--dark);
+}
+
+.filter__type-but:active {
+  border: 2px solid var(--white);
+}
+
+.filter__manuf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__manuf-img {
+  /* max-height: 20px; */
+  max-width: 80px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  opacity: 30%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.filter__manuf-img:hover,
+.filter__manuf-img:active {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 1472px) {
+  .filter__manuf-img {
+    max-width: 60px;
+  }
+
+  .filter {
+    max-width: 24px;
+  }
+
+  .catalog__filter__open {
+    width: 23.9vw;
+  }
+}
+
+@media screen and (max-width: 1434px) {
+  .catalog__filter__open {
+    width: 25vw;
+  }
+
+  .filter__type-but {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1338px) {
+  .catalog__filter__open {
+    width: 26.5vw;
+  }
+}
+
+
+
+
+/* цветастики */
+.filter__rarity-rare {
+  background-color: var(--rare);
+}
+
+.filter__rarity-etech {
+  background-color: var(--e-tech);
+}
+
+.filter__rarity-perlamutr {
+  background-color: var(--perlamutr);
+}
+
+.filter__rarity-violet {
+  background-color: var(--violet);
+}
+
+.filter__rarity-legendary {
+  background-color: var(--legendary);
+}
+
+.filter__rarity-seraphim {
+  background-color: var(--seraphim);
+}
+
+.filter__rarity-rainbow {
+  background: var(--rainbow);
+}
+
+
+
+/* анимация фильтра */
+.alert-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.alert-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.filter__rarity-active {
+  border: 2px solid var(--green);
+}
+
+.filter__element-active {
+  opacity: 100%;
+}
+
+.filter__type-active {
+  background-color: var(--dark);
+}
+
+.filter__type-but-active {
+  border: 2px solid var(--white);
+}
+
+/* @media screen and (max-width: 934px) {
+
+} */

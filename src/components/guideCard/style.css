@@ -1,0 +1,149 @@
+.guide__card {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.guide__card__header {
+    font-size: 16px;
+}
+
+.guide__card__text {
+    font-size: 12px;
+}
+
+.guide__card__img {
+    max-width: 128px;
+    max-height: 90px;
+    cursor: pointer;
+}
+
+.guide__card__desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.guide__card__img__cont {
+    margin-top: 8px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    width: 60vw;
+    height: 80vh;
+    margin: 4.5% auto;
+    background-color: var(--black);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--dark);
+    padding: 32px;
+}
+
+.modal-content-center {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.modal__img {
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+.modal-close {
+    left: 26vw;
+    position: relative;
+}
+
+.modal__header {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.modal-close {
+    cursor: pointer;
+}
+
+.buff {
+    color: var(--green);
+}
+
+.debuff {
+    color: var(--description);
+}
+
+@media screen and (max-width: 980px) {
+    .modal-content {
+        width: 80vw;
+    }
+
+    .modal-close {
+        left: 36vw;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .modal-content {
+        margin: 10% auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .modal__img {
+        max-width: 70vw;
+        max-height: 60vw;
+    }
+
+    .modal-content {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .modal__header {
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .modal__img {
+        max-height: 50vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .modal__img {
+        max-height: 50vw;
+    }
+
+    .modal-content {
+        width: 80vw;
+        height: 90vw;
+    }
+
+    .modal-close {
+        left: 26vw;
+    }
+}

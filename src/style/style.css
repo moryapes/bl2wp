@@ -1,0 +1,154 @@
+/* подключение шрифтов */
+@font-face {
+    font-family: "IBMPlex";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/IBMPlexMono-Regular.ttf") format("truetype");
+    src: url("../fonts/IBMPlexMono-Regular.woff") format("woff");
+    src: url("../fonts/IBMPlexMono-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "IBMPlex";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/IBMPlexMono-Medium.ttf") format("truetype");
+    src: url("../fonts/IBMPlexMono-Medium.woff") format("woff");
+    src: url("../fonts/IBMPlexMono-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "IBMPlex";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/IBMPlexMono-Bold.ttf") format("truetype");
+    src: url("../fonts/IBMPlexMono-Bold.woff") format("woff");
+    src: url("../fonts/IBMPlexMono-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Compact";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Compact.ttf") format("truetype");
+    src: url("../fonts/compact.woff") format("woff");
+    src: url("../fonts/compact.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Compact";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Compact-Bold.ttf") format("truetype");
+    src: url("../fonts/compact-bold.woff") format("woff");
+    src: url("../fonts/compact-bold.woff2") format("woff2");
+}
+
+/* очистка стиляшек */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+::selection {
+    background-color: var(--description);
+}
+
+/* цвета */
+:root {
+    --main: #393939;
+    --black: #262626;
+    --dark: #1C1C1C;
+    --white: #EFEFEF;
+    --description: #FF5D53;
+    --accent: #FCF521;
+    /* по редкости */
+    --rare: #78A6FF;
+    --e-tech: #FF63C1;
+    --violet: #B67CFF;
+    --legendary: #FFA620;
+    --seraphim: #FFA7EC;
+    --perlamutr: #39FFF3;
+    --green: #39FF41;
+    --rainbow: linear-gradient(135deg, #FF715E, #FFB36D, #FFF06C, #BEFF6C, #7DFFE0, #61AAFF, #E18CFF);
+}
+
+/* глобальные стили */
+* {
+    font-family: 'IBMPlex', Courier, monospace;
+}
+
+body {
+    background-color: var(--dark);
+    opacity: 1;
+    min-height: 100vh;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg, var(--black) 0, var(--black) 1px, var(--dark) 0, var(--dark) 99%);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 32px;
+    color: var(--description);
+    -webkit-text-stroke: 1px var(--dark);
+    font-family: 'Compact', Courier, monospace;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 24px;
+    margin-bottom: -8px;
+}
+.main {
+    background-color: var(--main);
+    width: 1136px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 32px 48px;
+    gap: 24px;
+}
+
+.wrapper, .main, .ne_main {
+    min-height: calc(100vh - 79px - 75px);
+}
+
+@media screen and (min-width: 1921px) {
+    .main, .ne_main {
+        width: 88.75vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .main, .ne_main {
+        width: 88.75vw;
+    }
+}
+
+@media screen and (max-width: 860px) { 
+    .main {
+        gap: 16px;
+        padding: 24px 32px;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .main {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .main {
+        padding-top: 68px;
+    }
+}
+

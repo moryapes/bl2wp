@@ -1,0 +1,253 @@
+/* выбор оружия */
+
+.weapon__menu__item {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white);
+    width: 171px;
+    height: 65px;
+    background-color: var(--black);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.weapon__menu__item:hover {
+    background-color: var(--dark);
+}
+
+.weapon__menu__item-active {
+    background-color: var(--dark);
+    z-index: 0;
+    align-items: flex-start;
+    padding-top: 16px;
+    height: 100px;
+}
+
+.weapon__menu {
+    display: flex;
+    gap: 16px;
+}
+
+.weapon__desc {
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 10px;
+    line-height: 150%;
+    border: 2px solid var(--dark);
+    margin-top: 16px;
+    z-index: 9;
+    position: relative;
+  top: -36px;
+}
+
+.desc__list li{
+    list-style: inside; 
+    /* margin-left: 16px; */
+}
+
+.guide__cards__container {
+    padding: 32px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px 40px ;
+}
+
+.left-menu-item {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 16px;
+    padding: 8px 16px;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.left-menu-item:hover {
+    background-color: var(--dark);
+}
+
+.left-menu-item-active {
+    background-color: var(--dark);
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+}
+
+.left-menu {
+    position: fixed;
+    left: 10vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    border: 2px solid var(--dark);
+    margin-top: 4.2vw;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+    .left-menu {
+        margin-top: 5.6vw;
+        left: 5.3vw;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .left-menu {
+        left: 3vw;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .left-menu {
+        border-radius: 0 10px 10px 0;
+        border-left: 0px;
+        left: 0;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .left-menu-item {
+        width: 9.5vw;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .guide__cards__container {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .left-menu {
+        z-index: 10;
+    }
+
+    .left-menu-item {
+        width: 12vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .guide__cards__container {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .left-menu {
+        z-index: 10;
+    }
+
+    .left-menu-item {
+        width: 12vw;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .left-menu-item {
+        width: 13vw;
+    }
+
+    .weapon__menu__item {
+        font-size: 16px;
+    }
+
+    .guide__cards__container {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .left-menu {
+        margin-top: 9vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .left-menu-item {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .weapon__menu__item {
+        font-size: 14px;
+    }
+
+    .weapon__menu {
+        gap: 8px;
+    }
+
+    .weapon__desc {
+        top: -48px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .left-menu-item {
+        width: 16vw;
+        word-wrap: break-word;
+    }
+    .modal-content {
+        margin: 10% auto;
+    }
+
+    .wrapper__guide, .main__guide {
+        width: 100vw;
+    }
+
+    .guide__cards__container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    .left-menu-item {
+        width: 18vw;
+        word-wrap: break-word;
+    }
+
+    .weapons {
+        width: 110vw;
+    }
+
+    .left-menu {
+        margin-top: 19vw;
+    }
+
+    .main__guide {
+        width: 120vw;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .weapons {
+        width: 120vw;
+    }
+
+    .main__guide {
+        width: 130vw;
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+    .weapons {
+        width: 140vw;
+    }
+
+    .main__guide {
+        width: 155vw;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .left-menu-item {
+        width: 22vw;
+    }
+
+    .weapons {
+        width: 162vw;
+    }
+
+    .main__guide {
+        width: 177vw;
+    }
+}

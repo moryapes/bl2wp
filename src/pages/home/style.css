@@ -1,0 +1,800 @@
+/* общие */
+.div-p {
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--white);
+}
+
+.big-h {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--white);
+    font-family: 'Compact', Courier, monospace;
+    text-shadow: black 3px 0;
+}
+
+.small-h {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--white);
+    font-family: 'Compact', Courier, monospace;
+    text-shadow: black 3px 0;
+}
+
+.yellow {
+    color: var(--accent);
+}
+
+.red {
+    color: var(--description);
+}
+
+/* инфо */
+
+.div__info {
+    background: linear-gradient(to right, var(--black), 80%, var(--dark));
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.div__info-text {
+    padding: 32px 0 27px 40px;
+}
+
+.div__info-h {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--white);
+    max-width: 670px;
+    margin-bottom: 16px;
+}
+
+.div__info p{
+    max-width: 660px;
+}
+
+.div__info-maya {
+    position: absolute;
+    top: -19px; 
+    right: 32px;
+}
+
+
+/* карточки */
+.div__stuff {
+    margin: 0;
+    position: relative;
+}
+
+.div__stuff__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stuff__card {
+    background-color: var(--black);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    max-width: 330px;
+    width: 25.78vw;
+    max-height: 240px;
+    height: 18.75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+.stuff__card:hover {
+    background-color: var(--dark);
+    border: 2px solid var(--accent);
+}
+
+.need {
+    transform: rotate(-4deg);
+    position: absolute;
+    top: -2px;
+    left: 80px;
+}
+
+.want {
+    transform: rotate(3.5deg);
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+}
+
+.stuff__card-img {
+    max-width: 300px;
+    max-height: 180px;
+}
+
+/* руководство */
+
+.div__guide {
+    background: linear-gradient(to right, var(--dark), 10%, var(--black));
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    margin: 0;
+    padding: 16px 40px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.div__guide-btn {
+    background-color: var(--description);
+    color: var(--dark);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    transition: all 0.3s;
+    font-family: 'Compact';
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px 124px;
+}
+.div__guide-btn:hover {
+    background-color: var(--accent);
+}
+
+.guide {
+    margin-bottom: 64px;
+    transform: rotate(3.5deg);
+}
+
+.div__guide__text {
+    text-align: center;
+    padding-left: 24px;
+    padding-top: 32px;
+}
+
+.div__guide__card{
+    background-color: var(--dark);
+    border-radius: 10px;
+    padding: 30px 4px;
+    text-align: center;
+    align-items: center;
+}
+
+.div__guide__card img{
+    max-height: 37px;
+}
+
+.div__guide-zero {
+    position: absolute;
+    top: -10px; 
+    right: 192px;
+}
+
+.mmb {
+    margin-bottom: 16px;
+}
+
+/* контакты */
+
+.div__contact {
+    display: flex;
+    margin: 0;
+    gap: 24px;
+}
+
+.div__contact__questions {
+    background-color: var(--black);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    padding: 8px 40px 40px 40px;
+}
+
+.div__contact__social {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    text-align: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 18px;
+    background-color: var(--black);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    max-width: 320px;
+    position: relative;
+}
+.social path {
+    transition: all 0.4s;
+}
+
+.social:hover path {
+    fill: var(--accent);
+}
+
+.mb {
+    margin-bottom: 8px;
+}
+
+.question {
+    transform: rotate(-4deg);
+    margin-bottom: 32px;
+}
+
+.write {
+    transform: rotate(3.5deg);
+}
+
+.write::after {
+    content: '';
+    height: 2px;
+    width: 319px;
+    background: var(--dark);
+    position: absolute;
+    left: 1px;
+    top: 78px;
+    transform: rotate(-1deg);
+}
+.write::before {
+    content: '';
+    transform: rotate(89deg);
+    height: 2px;
+    width: 252px;
+    background: var(--dark);
+    position: absolute;
+    left: 39px;
+    top: 84px;
+}
+
+/* адаптация */
+
+@media screen and (max-width: 1200px) {
+    .div__guide-zero {
+        top: 9px; 
+        right: 120px;
+        width: 200px; 
+    }
+
+    .div-p {
+        font-size: 16px;
+    }
+
+    .div__info-maya {
+        width: 230px; 
+        top: 0;
+    }
+
+    .div__info-h {
+        font-size: 18px;
+    }
+
+    .div__info-text {
+        width: 56vw;
+    }
+
+    .social {
+        width: 60px;
+    }
+
+    .write::after {
+        width: 318px;
+        left: 1px;
+        top: 78px;
+    }
+    .write::before {
+        height: 2px;
+        width: 234px;
+        left: 48px;
+        top: 77px;
+    }
+
+    .stuff__card-img {
+        max-width: 220px;
+        max-height: 140px;
+    }
+
+    .big-h {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1055px) { 
+    .div__contact__questions {
+        padding: 4px 24px 24px 24px;
+    }
+
+    .write::after {
+        top: 70px;
+    }
+    .write::before {
+        width: 214px;
+        left: 56px;
+        top: 72px;
+    }
+
+    .div__guide {
+        padding: 16px 24px;
+    }
+
+    .div__guide__text {
+        padding-left: 16px;
+    }
+
+    .small-h {
+        font-size: 30px;
+    }
+
+    .div__info-text {
+        padding: 32px 0 27px 24px;
+    }
+}
+
+@media screen and (max-width: 1019px) { 
+    .write::before {
+        width: 238px;
+        left: 50px;
+        top: 76px;
+    }
+
+    .div__guide-zero {
+        top: 21px; 
+        right: 120px;
+        width: 190px; 
+    }
+}
+
+@media screen and (max-width: 992px) { 
+    .div__guide-zero {
+        top: 34px; 
+        right: 110px;
+        width: 180px; 
+    }
+}
+
+@media screen and (max-width: 965px) { 
+    .div__info-text {
+        width: 46vw;
+    }
+
+    .div__info-maya {
+        width: 260px; 
+        top: -9px;
+        right: -12px;
+    }
+
+    .write::before {
+        width: 224px;
+        left: 50px;
+        top: 74px;
+    }
+
+    .div-p {
+        font-size: 14px;
+    }
+
+    .stuff__card-img {
+        max-width: 180px;
+        max-height: 100px;
+    }
+
+    .small-h {
+        font-size: 24px;
+    }
+
+    .stuff__card {
+        width: 25vw;
+    }
+
+    .div__guide-zero {
+        top: 9px; 
+        right: 140px;
+        width: 200px; 
+    }
+
+    .div__guide {
+        padding: 16px;
+    }
+
+    .div__guide__text {
+        padding: 16px 32px;
+    }
+    
+    .div__guide-btn {
+        padding: 8px 80px;
+    }
+
+    .guide {
+        width: 280px;
+        margin-bottom: 32px;
+    }
+
+    .contact__text {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 915px) { 
+    .question {
+        margin-bottom: 16px;
+    }
+
+    .write::before {
+        width: 226px;
+        left: 50px;
+        top: 74px;
+    }
+}
+
+@media screen and (max-width: 873px) { 
+    .div__info-maya {
+        width: 260px; 
+        top: 12px;
+        right: -12px;
+    }
+
+    .write::before {
+        width: 228px;
+        left: 50px;
+        top: 74px;
+    }
+
+    .div__guide-zero {
+        top: 33px; 
+        right: 120px;
+        width: 180px; 
+    }
+}
+
+@media screen and (max-width: 792px) { 
+    .div__contact__social {
+        grid-template-columns: 120px 120px;
+    }
+
+    .write::after {
+        width: 244px;
+        top: 64px;
+    }
+
+    .write::before {
+        width: 222px;
+        left: 16px;
+        top: 70px;
+    }
+
+    .contact__text {
+        font-size: 14px;
+    }
+
+    .div__guide-zero {
+        top: 19px; 
+        right: 120px;
+        width: 160px; 
+    }
+
+    .big-h {
+        font-size: 28px;
+    }
+
+    .div__guide__card {
+        padding: 20px 4px;
+    }
+
+    .stuff__card-img {
+        max-width: 140px;
+        max-height: 90px;
+    }
+}
+
+@media screen and (max-width: 740px) { 
+    .div__guide__text {
+        padding: 8px 0;
+    }
+
+    .div__guide-zero {
+        top: 29px; 
+        right: 112px;
+        width: 150px; 
+    }
+
+    .small-h {
+        font-size: 20px;
+    }
+
+    .need {
+        top: -8px;
+        left: 20px;
+    }
+
+    .want {
+        bottom: -4px;
+        right: 20px;
+    }
+
+    .social {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 690px) { 
+    .div__info-text {
+        padding: 20px 0 20px 24px;
+    }
+
+    .div__info-maya {
+        width: 250px; 
+        top: 50px;
+        right: -24px;
+    }
+
+    .div__guide-btn {
+        font-size: 16px;
+    }
+
+    .big-h {
+        font-size: 26px;
+    }
+
+    .contact__text {
+        display: none;
+    }
+
+    .social__cont {
+        width: 80px;
+    }
+    
+    .write {
+        font-size: 22px;
+    }
+
+    .div__contact__social {
+        grid-template-columns: 80px 80px
+    }
+
+    .write::after {
+        width: 163px;
+        top: 64px;
+    }
+
+    .write::before {
+        width: 220px;
+        left: -22px;
+        top: 66px;
+    }
+
+    .div__guide-btn {
+        padding: 8px 60px;
+    }
+
+    .guide {
+        width: 200px;
+        margin-bottom: 38px;
+    }
+
+    .div__guide-zero {
+        top: 44px; 
+        right: 112px;
+        width: 150px; 
+    }
+}
+
+@media screen and (max-width: 616px) { 
+    .div__info-h {
+        width: 320px;
+    }
+
+    .write::before {
+        width: 240px;
+        left: -32px;
+        top: 71px;
+    }
+
+    .div__info-maya {
+        width: 220px; 
+        top: 49px;
+        right: -24px;
+    }
+}
+
+@media screen and (max-width: 588px) {
+    .big-h {
+        font-size: 21px;
+    }
+
+    .div__contact__questions {
+        padding: 4px 16px 16px 16px;
+    }
+
+    .div__guide-zero {
+        top: 41px; 
+        right: 100px;
+        width: 140px; 
+    }
+    
+    .div__guide__text {
+        padding:  16px 0;
+    }
+
+    .write::before {
+        width: 225px;
+        left: -26px;
+        top: 67px;
+    }
+    .div__info-h {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .div__contact {
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .div__info-text {
+        padding: 16px 0 16px 20px;
+    }
+
+    .div__guide__card {
+        display: none;
+    }
+
+    .div__guide-zero {
+        top: 17px; 
+        right: 8px;
+        width: 140px; 
+    }
+    
+    .stuff__card-img {
+        max-width: 120px;
+    }
+
+    .write::before {
+        width: 225px;
+        left: -26px;
+        top: 67px;
+    }
+
+    .write {
+        display: none;
+    }
+
+    .div__contact__social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+
+    .div__info-maya {
+        width: 210px; 
+        top: 54px;
+        right: -24px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .div__info-maya {
+        width: 180px; 
+        top: 101px;
+        right: -32px;
+    }
+
+    .div__stuff__cards {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .stuff__card {
+        width: 100%;
+        height: 30vw;
+        max-width: 100%;
+    }
+
+    .stuff__card-img {
+        max-width: 280px;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .div__info-maya {
+        width: 180px; 
+        top: 80px;
+        right: -32px;
+    }
+
+    .div__info-text {
+        width: 50vw;
+    }
+
+    .div__guide-zero {
+        right: -8px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .div__info-maya {
+        width: 180px; 
+        top: 122px;
+        right: -32px;
+    }
+
+    .div__info-text {
+        width: 50vw;
+    }
+
+    .div__guide-zero {
+        top: 26px; 
+        right: -20px;
+        width: 120px; 
+    }
+
+    .div__guide {
+        padding: 8px;
+    }
+
+    .div__info-h {
+        width: 270px;
+    }
+
+    .div__contact {
+        flex-direction: column;
+    }
+
+    .div__contact__social {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .div__info-maya {
+        width: 180px; 
+        top: 146px;
+        right: -32px;
+    }
+
+    .div__guide-zero {
+        top: 38px; 
+        right: -30px;
+        width: 110px; 
+    }
+
+    .div__info-h {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .div__info-maya {
+        display: none;
+    }
+
+    .div__guide-zero {
+        display: none;
+    }
+
+    .div__guide {
+        justify-content: center;
+    }
+
+    .div__info-text {
+        width: 240px;
+    }
+
+    .stuff__card-img {
+        max-width: 220px;
+        max-height: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .div__info-text, .div__info-h {
+        width: 200px;
+    }
+
+    .small-h {
+        font-size: 14px;
+    }
+
+    .stuff__card-img {
+        max-width: 200px;
+        max-height: 80px;
+    }
+}

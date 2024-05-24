@@ -1,0 +1,134 @@
+/* логотип */
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--white);
+    height: 56px;
+    transition: all 0.3s;
+}
+.header__logo:hover {
+    color: var(--description);
+}
+
+.hlt-w {
+    font-size: 14px;
+}
+
+/* шапочка */
+
+.header {
+    background-color: var(--black);
+    padding: 8px 0;
+    border-bottom: 3px solid var(--dark);
+    display: flex;
+    justify-content: center;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 1136px;
+    width: 88.75vw;
+}
+
+.header__menu__list {
+    display: flex;
+    gap: 56px;
+}
+
+.header__menu__link {
+    color: var(--white);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.header__menu__link:hover {
+    color: var(--description);
+}
+
+/* borgir */
+.header__burger {
+    display: none; /* Initially hide for larger screens */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.burger__line {
+    width: 30px;
+    height: 2px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: all 0.3s;
+}
+
+.header__menu__list.open {
+    display: block;
+}
+
+/* адаптация */
+
+@media screen and (max-width: 948px) { 
+    .header__menu__link, .header {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 860px) { 
+    .header__menu__list{
+        gap: 38px;
+    }
+
+    .header__logo-img {
+        width: 30%;
+    }
+
+    .header {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .header__burger {
+        display: block;
+    }
+
+    .header__menu__list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -900%; 
+        left: 0;
+        background-color: var(--black);
+        width: 100%;
+        padding: 10px 40px;
+        z-index: 10;
+        text-align: right;
+        border-bottom: 3px solid var(--dark);
+        transition: top 0.5s ease;
+    }
+    .header__menu__list.open {
+        top: 56px;
+    }
+
+    .header__menu__list__item {
+        margin-bottom: 12px;
+    }
+
+    .header__menu__link {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* При необходимости измените значение z-index в зависимости от других элементов на странице */
+    }
+
+}
